@@ -1,0 +1,65 @@
+##
+本想写个小脚本 
+打开MF网站 > 进入MF社区 > 注册 >登陆 >发帖
+
+后发现注册需要手机，邮箱互动 不适合短时间内完善好
+
+就简化，用126邮箱发邮件
+打开126 > 登陆 > 写邮件 > 发送 
+
+脚本花了几个小时搞定
+包括安装搭小的测试环境 
+##
+
+
+语言/工具： Python + Selenium (Chrome Webdriver), Vscode, Github
+
+MacPro
+环境：
+	1) Python 3.9.4
+	2) VScode 1.55
+     VScode 需要安装Python插件, 设置Python选择Python3
+	3) Selenium: 
+     pip3 install selenium - 安装 成功
+     pip3 show selenium - 查看版本:  Version: 3.141.0
+
+     测试安装成功否
+     python
+     >>> from selenium import webdriver - 不报错即成功 
+	
+	4) Chrome Version 90.0.4430.93 (Official Build) (x86_64)
+	5) Chrome Webdriver
+     找到与 Chrome 90 区配的 chromedriver
+     把chromedriver 拷到 /usr/local/bin/下
+
+     遇到一个小坑: chromedriver不能用，一直显示非法
+     解决办法： Control-click, choose open from the shortcut menu > open - 解决
+	
+     Chromedriver -v 
+     查看版本  ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429})
+	
+过程：
+主要定位：用户名，密码，登陆，
+然后 写信，收件人，主题，内容，发送
+
+踩过的坑和解决办法：
+“用户名，密码” - 被包在iframe里，所以需要切换到frame里 再用xpath
+“收件人” - 输入邮箱后 需要回车 就模拟了下回车，所以import了 Keys模块
+“发送” - 发现“发送” 很复合，包含比如飞机icon，发送text...花了些时间 
+
+我定位元素的方法： Chrome > … > more tools > developer tools > ElementS
+或
+直接page页面 右击 > Inspect 
+一般用id, name, xpath
+
+获取xpath的方法，可以在Chrome中安装取Xpath的插件
+或右击 copy > copy xpath / copy full xpath 也可以
+
+
+成果：
+1）脚本 push到 github上 
+github链接：https://github.com/EmilyMengx/emilymengforMF
+
+2）脚本run的视频：
+
+

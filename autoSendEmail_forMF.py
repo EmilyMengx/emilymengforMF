@@ -58,3 +58,6 @@ time.sleep(1)
 # 释放 frame
 driver.switch_to.default_content()
 driver.find_element_by_xpath('//*[@class="jp0"]/div[@role="button"][1]').click()
+
+# 退出
+driver.quit()

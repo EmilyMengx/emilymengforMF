@@ -1,4 +1,3 @@
-##
 本想写个小脚本 
 打开MF网站 > 进入MF社区 > 注册 >登陆 >发帖
 
@@ -9,7 +8,7 @@
 
 脚本花了几个小时搞定
 包括安装搭小的测试环境 
-##
+
 
 语言/工具： Python + Selenium (Chrome Webdriver), Vscode, Github
 
@@ -43,7 +42,7 @@ MacPro
 	然后 写信，收件人，主题，内容，发送
 
 执行：
-	VSCode terminal: python3 testforMF_126.py
+	VSCode terminal: python3 autoSendEmail_forMF.py
 
 踩过的坑和解决办法：
 	“用户名，密码” - 被包在iframe里，所以需要切换到frame里 再用xpath

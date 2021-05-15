@@ -37,7 +37,7 @@ driver.find_element_by_class_name("nui-editableAddr-ipt").send_keys(Keys.ENTER)
 time.sleep(1)
 
 # 输入 邮件主题
-driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div[1]/section/header/div[2]/div[1]/div/div/input").send_keys("很想加入MF")
+driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div[1]/section/header/div[2]/div[1]/div/div/input").send_keys("很想加入贵公司")
 time.sleep(1)
 
 driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div[1]/section/header/div[2]/div[1]/div/div/input").send_keys(Keys.ENTER)
@@ -49,7 +49,7 @@ f1 = driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[2]/div[1]/sectio
 driver.switch_to.frame(f1)
 
 driver.find_element_by_xpath("/html/body").clear()
-driver.find_element_by_xpath("/html/body").send_keys("这是为应聘MF写的一个自动化脚本，自动发送邮件")
+driver.find_element_by_xpath("/html/body").send_keys("这是Emily写的一个自动化脚本，发送邮件")
 
 driver.find_element_by_xpath("/html/body").send_keys(Keys.ENTER)
 time.sleep(1)

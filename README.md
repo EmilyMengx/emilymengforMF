@@ -1,5 +1,5 @@
 # emilymengforMF
-this is Emily Meng，孟祥凤 Github repo,
-and this repo is used for applying for MF
+this is Emily Meng's Github repo,
+and this repo is used for writing a framework
 
-I wrote a  Python script to send email automatically 
+I wrote a Python script to send email automatically 
